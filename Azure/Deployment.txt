@@ -1,0 +1,5 @@
+Create an Azure Static Web App > Get deployment token 
+
+GitHub repo > Settings > Secrets & Vars > Actions > New Repo Secret (paste deployment token as AZURE_STATIC_WEB_APPS_API_TOKEN)
+
+The deploy.yaml workflow should deploy to azure when your code is updated. If not just run the workflow in 'Actions'
