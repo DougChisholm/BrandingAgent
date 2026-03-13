@@ -217,6 +217,10 @@
     setField('vd-engine', vehicle.engineSize);
     setField('vd-colour', vehicle.colour);
     setField('vd-transmission', vehicle.transmission);
+    // Sync detail-table cells that mirror the header display values
+    setField('vd-make-td', vehicle.make);
+    setField('vd-model-td', vehicle.model);
+    setField('vd-year-td', vehicle.year);
   }
 
   /* ============================================================
@@ -232,8 +236,9 @@
 
     const setField = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
     setField('q-number', quoteData.quoteNumber);
-    // q-monthly and q-annual now hold the full formatted string including £
+    // q-monthly, q-monthly2 (price-presentation duplicate) and q-annual
     setField('q-monthly', '£' + quoteData.monthly.instalmentAmount.toFixed(2));
+    setField('q-monthly2', '£' + quoteData.monthly.instalmentAmount.toFixed(2));
     setField('q-instalments', quoteData.monthly.instalments);
     setField('q-deposit', '£' + quoteData.monthly.deposit.toFixed(2));
     setField('q-total-payable', '£' + quoteData.monthly.totalPayable.toFixed(2));

@@ -138,18 +138,5 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script>
-    // Sync table cells with header values once app.js populates them
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        var make = document.getElementById('vd-make');
-        var model = document.getElementById('vd-model');
-        var year = document.getElementById('vd-year');
-        if (make) document.getElementById('vd-make-td').textContent = make.textContent;
-        if (model) document.getElementById('vd-model-td').textContent = model.textContent;
-        if (year) document.getElementById('vd-year-td').textContent = year.textContent;
-      }, 50);
-    });
-  </script>
 </body>
 </html>

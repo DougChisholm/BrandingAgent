@@ -164,15 +164,5 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script>
-    // Sync duplicate monthly display
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        var m = document.getElementById('q-monthly');
-        var m2 = document.getElementById('q-monthly2');
-        if (m && m2) m2.textContent = m.textContent;
-      }, 60);
-    });
-  </script>
 </body>
 </html>
