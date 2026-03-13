@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Payment</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step done" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step done" id="step-extras">
+          <div class="dot"></div>
+          Extras
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step done" id="step-review">
+          <div class="dot"></div>
+          Review
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step active" id="step-pay">
+          <div class="dot"></div>
+          Pay
+        </div>
+      </div>
+    </nav>
+    <div class="header-right">
+      <div>
+        <div class="header-quote-num">Quote number</div>
+        <div style="font-size:13px; font-weight:bold; color:var(--navy);" id="header-quote-num">P9Q461694</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <span style="font-size:18px;">🛒</span>
+        <span class="header-price"><span id="header-price-monthly">£23.24</span> / monthly</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="page-content">
+      <h1>Payment details</h1>
+      <p class="page-subtitle">Complete your payment to activate your policy</p>
+
+      <!-- Payment method toggle -->
+      <div class="payment-toggle">
+        <button class="payment-toggle-btn active" data-method="monthly">Monthly</button>
+        <button class="payment-toggle-btn" data-method="annual">Annual</button>
+      </div>
+
+      <!-- Monthly payment info -->
+      <div id="monthlyDetails">
+        <div class="panel panel--navy-border" style="max-width:520px; margin-bottom:24px;">
+          <h3 style="margin-bottom:12px;">Payment summary – Monthly</h3>
+          <div class="review-row">
+            <span class="label">Initial deposit (today)</span>
+            <span class="value" style="font-weight:bold; font-size:18px;">£55.03</span>
+          </div>
+          <div class="review-row">
+            <span class="label">Monthly instalments</span>
+            <span class="value">11 × £23.24</span>
+          </div>
+          <div class="review-row">
+            <span class="label">Total amount payable</span>
+            <span class="value" style="font-weight:bold;">£311.76</span>
+          </div>
+          <div class="review-row">
+            <span class="label">APR</span>
+            <span class="value">23.9% (fixed)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Annual payment info -->
+      <div id="annualDetails" style="display:none;">
+        <div class="panel panel--orange-border" style="max-width:520px; margin-bottom:24px;">
+          <h3 style="margin-bottom:12px;">Payment summary – Annual</h3>
+          <div class="review-row">
+            <span class="label">Total payment (today)</span>
+            <span class="value" style="font-weight:bold; font-size:18px;">£294.87</span>
+          </div>
+          <div class="review-row">
+            <span class="label">No interest charges</span>
+            <span class="value" style="color:#1b7a3e; font-weight:bold;">✓ Save £16.89</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card form -->
+      <div class="card-form">
+        <h2 style="margin-bottom:20px;">Card details</h2>
+
+        <div class="form-group">
+          <label class="form-label" for="cardNumber">Card number</label>
+          <input type="text" id="cardNumber" name="cardNumber" class="form-input"
+                 placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number">
+        </div>
+
+        <div class="card-row">
+          <div class="form-group">
+            <label class="form-label" for="cardExpiry">Expiry date</label>
+            <input type="text" id="cardExpiry" name="cardExpiry" class="form-input"
+                   placeholder="MM / YY" maxlength="7" autocomplete="cc-exp">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cardCvv">CVV / Security code</label>
+            <input type="text" id="cardCvv" name="cardCvv" class="form-input"
+                   placeholder="123" maxlength="4" autocomplete="cc-csc">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cardName">Name on card</label>
+          <input type="text" id="cardName" name="cardName" class="form-input"
+                 placeholder="As it appears on your card" autocomplete="cc-name">
+        </div>
+      </div>
+
+      <!-- Direct debit mandate (monthly only) -->
+      <div class="mandate-box" id="mandateBox" style="max-width:520px; margin-top:16px;">
+        <strong>Direct Debit mandate</strong><br>
+        By completing this payment you authorise Swinton Go! Insurance / BiSL Limited to collect your
+        monthly direct debit instalments as described above. You have the right to cancel this arrangement
+        at any time. If payment is not received your policy may be cancelled. Please refer to the terms
+        and conditions for full details of the direct debit guarantee.
+      </div>
+
+      <!-- Pay button -->
+      <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px; max-width:320px;">
+        <a href="confirmation.html" class="btn btn-primary" style="text-align:center; font-size:18px; padding:16px 40px;">
+          🔒 Pay now
+        </a>
+        <p class="text-muted font-sm" style="text-align:center;">
+          Your payment is secured with 256-bit SSL encryption
+        </p>
+        <a href="review.html" class="btn-back" style="text-align:center;">← Back</a>
+      </div>
+
+    </div><!-- /.page-content -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // Show/hide mandate box based on payment method
+    document.querySelectorAll('.payment-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var mandateBox = document.getElementById('mandateBox');
+        if (mandateBox) {
+          mandateBox.style.display = btn.dataset.method === 'monthly' ? 'block' : 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
