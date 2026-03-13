@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Review Your Policy</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step done" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step done" id="step-extras">
+          <div class="dot"></div>
+          Extras
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step active" id="step-review">
+          <div class="dot"></div>
+          Review
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-pay">
+          <div class="dot"></div>
+          Pay
+        </div>
+      </div>
+    </nav>
+    <div class="header-right">
+      <div>
+        <div class="header-quote-num">Quote number</div>
+        <div style="font-size:13px; font-weight:bold; color:var(--navy);" id="header-quote-num">P9Q461694</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <span style="font-size:18px;">🛒</span>
+        <span class="header-price"><span id="header-price-monthly">£23.24</span> / monthly</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="page-content">
+      <h1>Your policy overview</h1>
+      <p class="page-subtitle">Please review your details carefully before proceeding to payment</p>
+
+      <!-- Tab navigation -->
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="tab-summary">Summary</button>
+        <button class="tab-btn" data-tab="tab-vehicle">Vehicle Details</button>
+        <button class="tab-btn" data-tab="tab-cover">Cover Details</button>
+        <button class="tab-btn" data-tab="tab-drivers">You and your drivers</button>
+      </div>
+
+      <!-- ====== TAB: SUMMARY ====== -->
+      <div class="tab-pane active" id="tab-summary">
+
+        <!-- Vehicle panel -->
+        <div class="review-section">
+          <div class="review-section-title">🚗 Your vehicle</div>
+          <div class="review-section-body">
+            <div class="review-row">
+              <span class="label">Registration</span>
+              <span class="value">SG19 SWT</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Make</span>
+              <span class="value">Ford</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Model</span>
+              <span class="value">Focus 1.0T EcoBoost</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Year</span>
+              <span class="value">2019</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cover panel -->
+        <div class="review-section">
+          <div class="review-section-title">🛡️ Your cover</div>
+          <div class="review-section-body">
+            <div class="review-row">
+              <span class="label">Cover type</span>
+              <span class="value">Comprehensive</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Start date</span>
+              <span class="value">20th November 2026</span>
+            </div>
+            <div class="review-row">
+              <span class="label">No Claims Discount</span>
+              <span class="value">9 years or more</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Total excess</span>
+              <span class="value">£450</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drivers panel -->
+        <div class="review-section">
+          <div class="review-section-title">👤 Drivers</div>
+          <div class="review-section-body">
+            <div class="review-row">
+              <span class="label">Main driver</span>
+              <span class="value">Sam Smith</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Date of birth</span>
+              <span class="value">15/06/1985</span>
+            </div>
+            <div class="review-row">
+              <span class="label">Occupation</span>
+              <span class="value">Employed (full time)</span>
+            </div>
+            <div class="review-row" style="border-bottom:none; padding-top:12px;">
+              <a href="#" class="btn btn-secondary" style="padding:8px 18px; font-size:13px;">+ Add another driver</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional extras -->
+        <div class="review-section">
+          <div class="review-section-title">✨ Optional extras selected</div>
+          <div class="review-section-body">
+            <div class="review-row">
+              <span class="label">Motor Legal Protection</span>
+              <span class="value" style="color:#1b7a3e; font-weight:bold;">Included (standard)</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tab-summary -->
+
+      <!-- ====== TAB: VEHICLE ====== -->
+      <div class="tab-pane" id="tab-vehicle">
+        <div class="panel">
+          <h3 style="margin-bottom:16px;">Vehicle details</h3>
+          <div class="review-row"><span class="label">Registration</span><span class="value">SG19 SWT</span></div>
+          <div class="review-row"><span class="label">Make</span><span class="value">Ford</span></div>
+          <div class="review-row"><span class="label">Model</span><span class="value">Focus</span></div>
+          <div class="review-row"><span class="label">Variant</span><span class="value">1.0T EcoBoost 125ps Titanium</span></div>
+          <div class="review-row"><span class="label">Year</span><span class="value">2019</span></div>
+          <div class="review-row"><span class="label">Fuel type</span><span class="value">Petrol</span></div>
+          <div class="review-row"><span class="label">Engine size</span><span class="value">999cc</span></div>
+          <div class="review-row"><span class="label">Colour</span><span class="value">Silver</span></div>
+          <div class="review-row"><span class="label">Transmission</span><span class="value">Manual</span></div>
+          <div class="review-row"><span class="label">Overnight parking</span><span class="value">Private driveway</span></div>
+          <div class="review-row"><span class="label">Annual mileage</span><span class="value">10,000</span></div>
+        </div>
+      </div>
+
+      <!-- ====== TAB: COVER ====== -->
+      <div class="tab-pane" id="tab-cover">
+        <div class="panel">
+          <h3 style="margin-bottom:16px;">Cover details</h3>
+          <div class="review-row"><span class="label">Cover type</span><span class="value">Comprehensive</span></div>
+          <div class="review-row"><span class="label">Start date</span><span class="value">20th November 2026</span></div>
+          <div class="review-row"><span class="label">No Claims Discount</span><span class="value">9 years or more</span></div>
+          <div class="review-row"><span class="label">Voluntary excess</span><span class="value">£300</span></div>
+          <div class="review-row"><span class="label">Compulsory excess</span><span class="value">£150</span></div>
+          <div class="review-row"><span class="label">Total excess</span><span class="value">£450</span></div>
+          <div class="review-row"><span class="label">Vehicle use</span><span class="value">Social, domestic &amp; commuting</span></div>
+        </div>
+      </div>
+
+      <!-- ====== TAB: DRIVERS ====== -->
+      <div class="tab-pane" id="tab-drivers">
+        <div class="panel">
+          <h3 style="margin-bottom:16px;">Main driver – Sam Smith</h3>
+          <div class="review-row"><span class="label">Title</span><span class="value">Mr</span></div>
+          <div class="review-row"><span class="label">First name</span><span class="value">Sam</span></div>
+          <div class="review-row"><span class="label">Surname</span><span class="value">Smith</span></div>
+          <div class="review-row"><span class="label">Date of birth</span><span class="value">15/06/1985</span></div>
+          <div class="review-row"><span class="label">Marital status</span><span class="value">Married</span></div>
+          <div class="review-row"><span class="label">Address</span><span class="value">12 Maple Street, Manchester, M1 1AA</span></div>
+          <div class="review-row"><span class="label">UK resident 3+ years</span><span class="value">Yes</span></div>
+          <div class="review-row"><span class="label">Homeowner</span><span class="value">Yes</span></div>
+          <div class="review-row"><span class="label">Employment status</span><span class="value">Employed (full time)</span></div>
+          <div class="review-row"><span class="label">Licence type</span><span class="value">Full UK licence</span></div>
+          <div class="review-row"><span class="label">Licence held since</span><span class="value">June 2006</span></div>
+          <div class="review-row"><span class="label">Claims in last 5 years</span><span class="value">None</span></div>
+          <div class="review-row"><span class="label">Convictions in last 5 years</span><span class="value">None</span></div>
+        </div>
+        <div style="margin-top:12px;">
+          <a href="#" class="btn btn-secondary" style="padding:10px 24px;">+ Add another driver</a>
+        </div>
+      </div>
+
+      <!-- Marketing preferences -->
+      <div class="marketing-section">
+        <h3>Marketing preferences</h3>
+        <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">
+          We'd like to keep you updated about our products and services. Please let us know how you'd like to hear from us:
+        </p>
+        <div class="marketing-channels">
+          <label class="checkbox-label">
+            <input type="checkbox" name="mktEmail"> Email
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="mktPost"> Post
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="mktPhone"> Phone
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="mktSms"> SMS/Text
+          </label>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-container--right" style="margin-top:32px;">
+        <a href="extras.html" class="btn-back">← Back</a>
+        <a href="payment.html" class="btn btn-primary">Continue to payment</a>
+      </div>
+
+    </div><!-- /.page-content -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

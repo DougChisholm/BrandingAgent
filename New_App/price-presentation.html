@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Your Price</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step active" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-extras">
+          <div class="dot"></div>
+          Extras
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-review">
+          <div class="dot"></div>
+          Review
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-pay">
+          <div class="dot"></div>
+          Pay
+        </div>
+      </div>
+    </nav>
+    <div class="header-right">
+      <div>
+        <div class="header-quote-num">Quote number</div>
+        <div style="font-size:13px; font-weight:bold; color:var(--navy);" id="header-quote-num">P9Q461694</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <span style="font-size:18px;">🛒</span>
+        <span class="header-price"><span id="header-price-monthly">£23.24</span> / monthly</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="page-content--wide">
+      <h1 style="font-size:32px; margin-bottom:4px;">Hi Sam,</h1>
+      <p class="orange-subtitle">here are your quote details...</p>
+
+      <!-- Price panels side by side -->
+      <div class="two-col" style="margin-top:16px;">
+
+        <!-- Monthly option -->
+        <div class="panel panel--orange-border" style="position:relative;">
+          <div style="position:absolute; top:16px; right:16px; background:var(--orange); color:white; font-size:11px; font-weight:bold; padding:3px 10px; border-radius:20px;">Popular</div>
+          <h2 style="margin-bottom:8px;">Pay monthly</h2>
+          <p class="price-instalment-label">Pay by instalments:</p>
+          <div style="margin:8px 0; display:flex; align-items:baseline; gap:6px;">
+            <span class="price-big"><span id="q-monthly">£23.24</span></span>
+            <span class="price-period">/ month</span>
+          </div>
+          <p style="color:var(--orange); font-size:14px; font-weight:bold; margin-bottom:8px;">
+            Initial deposit <span id="q-deposit">£55.03</span> then <span id="q-instalments">11</span> x <span id="q-monthly2">£23.24</span>
+          </p>
+          <p class="price-info">
+            Total amount payable: <strong id="q-total-payable">£311.76</strong><br>
+            APR <span id="q-apr">23.9</span>% (fixed)
+          </p>
+          <a href="extras.html" class="btn btn-primary" style="display:block; text-align:center; margin-top:20px; width:100%;">
+            Choose monthly
+          </a>
+        </div>
+
+        <!-- Annual option -->
+        <div class="panel panel--navy-border">
+          <h2 style="margin-bottom:8px;">Pay annually</h2>
+          <p class="price-instalment-label">Pay in full – no interest:</p>
+          <div style="margin:8px 0; display:flex; align-items:baseline; gap:6px;">
+            <span class="price-big" style="font-size:36px;"><span id="q-annual">£294.87</span></span>
+          </div>
+          <p class="price-info">
+            One single payment – no credit charges.<br>
+            Save money compared to paying monthly.
+          </p>
+          <a href="extras.html" class="btn btn-secondary" style="display:block; text-align:center; margin-top:20px; width:100%;">
+            Choose annual
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Policy Benefits summary -->
+      <div class="panel" style="margin-top:24px;">
+        <h2 style="margin-bottom:16px;">What's included in your policy</h2>
+        <ul class="benefits-list">
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Drive other cars
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Courtesy car
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Personal accident benefits
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Replacement locks
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Windscreen cover
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Medical expenses
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Personal belongings
+          </li>
+          <li>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1b7a3e;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">✓</span>
+            Driving abroad
+          </li>
+        </ul>
+        <div class="info-banner" style="margin-top:12px;">
+          <a href="#">Insurance Product Information Document ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

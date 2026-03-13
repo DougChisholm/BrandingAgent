@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Your Quote Details</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* Scenic placeholder images via gradient/SVG patterns */
+    .hero-countryside {
+      width: 100%; height: 160px;
+      background: linear-gradient(135deg, #4a7c59 0%, #6aaa6a 40%, #a8d8a8 60%, #87ceeb 100%);
+      border-radius: 6px 6px 0 0;
+      display: flex; align-items: flex-end; justify-content: flex-start;
+      padding: 12px; position: relative; overflow: hidden;
+    }
+    .hero-countryside::after {
+      content: '🌿🛣️🌾'; font-size: 32px; position: absolute; bottom:8px; right:12px; opacity:0.6;
+    }
+    .hero-tent {
+      width: 100%; height: 160px;
+      background: linear-gradient(135deg, #87ceeb 0%, #b0d4e8 50%, #dde8f0 100%);
+      border-radius: 6px 6px 0 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 64px; color: #4682b4; overflow: hidden;
+    }
+    .hero-plant {
+      width: 100%; height: 160px;
+      background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+      border-radius: 6px 6px 0 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 56px; overflow: hidden;
+    }
+    .check-circle {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #1b7a3e; color: #fff; font-size: 12px; font-weight: bold;
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .check-std {
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 2px solid var(--navy); color: var(--navy); font-size: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step active" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-extras">
+          <div class="dot"></div>
+          Extras
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-review">
+          <div class="dot"></div>
+          Review
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-pay">
+          <div class="dot"></div>
+          Pay
+        </div>
+      </div>
+    </nav>
+    <!-- Quote number + price -->
+    <div class="header-right">
+      <div>
+        <div class="header-quote-num">Quote number</div>
+        <div style="font-size:13px; font-weight:bold; color:var(--navy);" id="header-quote-num">P9Q461694</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <span style="font-size:18px;">🛒</span>
+        <span class="header-price"><span id="header-price-monthly">£23.24</span> / monthly</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="page-content--wide">
+
+      <!-- Greeting -->
+      <h1 style="font-size:32px; margin-bottom:4px;">Hi Sam,</h1>
+      <p class="orange-subtitle">here are your quote details...</p>
+
+      <div class="two-col--60-40" style="margin-top: 8px;">
+
+        <!-- ======== LEFT COLUMN ======== -->
+        <div>
+
+          <!-- Policy Benefits -->
+          <div class="panel" style="padding:0; overflow:hidden;">
+            <div class="hero-countryside"></div>
+            <div style="padding:24px;">
+              <h2 style="margin-bottom:12px;">Your policy benefits</h2>
+              <ul class="benefits-list">
+                <li>
+                  <span class="check-circle">✓</span>
+                  Drive other cars
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Windscreen cover
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Courtesy car
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Medical expenses
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Personal accident benefits
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Personal belongings
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Replacement locks
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+                <li>
+                  <span class="check-circle">✓</span>
+                  Driving abroad
+                  <span class="help-icon" title="More information">?</span>
+                </li>
+              </ul>
+              <div class="info-banner">
+                For details of the key benefits and limitations please <a href="#">click here</a><br>
+                <a href="#" style="color:var(--navy); font-weight:bold; font-size:14px; margin-top:6px; display:inline-block;">
+                  ↗ Insurance Product Information Document
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Your Cover -->
+          <div class="panel" style="padding:0; overflow:hidden; margin-top:0;">
+            <div class="hero-tent">⛺</div>
+            <div style="padding:24px;">
+              <h2 style="margin-bottom:4px;">Your cover</h2>
+              <h3 class="text-orange" style="margin-bottom:16px;">Your insurance policy</h3>
+              <table class="detail-table">
+                <tr>
+                  <td>Cover type</td>
+                  <td id="q-cover-type">Comprehensive</td>
+                  <td><button class="edit-icon" title="Edit">✏️</button></td>
+                </tr>
+                <tr>
+                  <td>Start date</td>
+                  <td id="q-start-date">20th November 2026</td>
+                  <td><button class="edit-icon" title="Edit">✏️</button></td>
+                </tr>
+                <tr>
+                  <td>No Claims Discount</td>
+                  <td id="q-ncd">9 years or more</td>
+                  <td><button class="edit-icon" title="Edit">✏️</button></td>
+                </tr>
+              </table>
+
+              <!-- Additional Cover -->
+              <h3 style="margin-top:24px; margin-bottom:4px;">Your additional cover</h3>
+              <h4 style="font-size:15px; font-weight:bold; margin-bottom:4px; color:var(--text-body);">Selected by you</h4>
+              <p class="text-muted font-sm" style="margin-bottom:10px;">You will have the option to edit these before payment.</p>
+              <div class="cover-item">
+                <span class="check-circle">✓</span>
+                No Claims Discount Protection
+              </div>
+              <div class="cover-item">
+                <span class="check-circle">✓</span>
+                RAC Breakdown cover
+              </div>
+
+              <h4 style="font-size:15px; font-weight:bold; margin-top:16px; margin-bottom:4px; color:var(--text-body);">Included as standard</h4>
+              <p class="text-muted font-sm" style="margin-bottom:10px;">
+                This product includes the following as standard, and as such can't be removed.
+                For details of the key benefits and limitations please click on the below document links.
+              </p>
+              <div class="cover-item">
+                <span class="check-std">✓</span>
+                <a href="#" style="color:var(--navy); font-weight:bold;">Motor Legal Protection</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /LEFT COLUMN -->
+
+        <!-- ======== RIGHT COLUMN ======== -->
+        <div>
+
+          <!-- Your Price -->
+          <div class="panel" style="padding:24px;">
+            <h2 style="margin-bottom:16px;">Your price</h2>
+            <p class="price-instalment-label">You have chosen to pay by instalments:</p>
+            <div style="margin: 8px 0 4px; display:flex; align-items:baseline; gap:6px;">
+              <span class="price-big"><span id="q-monthly">£23.24</span></span>
+              <span class="price-period">/ x<span id="q-instalments">11</span> months</span>
+            </div>
+            <p class="price-info" style="color:var(--orange); font-weight:bold; margin-top:8px;">
+              Initial deposit <span id="q-deposit">£55.03</span>, total amount payable <span id="q-total-payable">£311.76</span>
+            </p>
+            <p class="price-info">
+              Amount of credit <span id="q-credit">£214.94</span> | Interest <span id="q-interest">£30.25</span> | Applicable APR <span id="q-apr">23.9</span>%<br>
+              Monthly payments involve a credit agreement and will cost more.<br>
+              The interest displayed is calculated at a fixed rate of xx%.
+            </p>
+
+            <hr class="divider" style="margin: 16px 0;">
+
+            <div class="price-annual">
+              <span style="font-weight:bold;">or <span id="q-annual">£294.87</span> when you pay annually</span>
+            </div>
+            <a href="price-presentation.html" class="price-annual-link" style="display:block; margin-top:6px;">
+              Pay annually instead
+            </a>
+          </div>
+
+          <!-- Your Excess -->
+          <div class="panel" style="padding:0; overflow:hidden; margin-top:0;">
+            <div class="hero-plant">🌱</div>
+            <div style="padding:24px;">
+              <h2 style="margin-bottom:4px;">Your excess</h2>
+              <h3 class="text-orange" style="margin-bottom:16px;">Your insurance policy</h3>
+              <table class="detail-table">
+                <tr>
+                  <td>Voluntary excess</td>
+                  <td id="q-vol-excess">£300</td>
+                  <td><button class="edit-icon" title="Edit">✏️</button></td>
+                </tr>
+                <tr>
+                  <td>Compulsory excess</td>
+                  <td id="q-comp-excess">£150</td>
+                  <td><button class="info-icon" title="More info">ℹ️</button></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:bold; color:var(--navy);">Total excess</td>
+                  <td id="q-total-excess" style="font-weight:bold; color:var(--navy);">£450</td>
+                  <td><button class="info-icon" title="More info">ℹ️</button></td>
+                </tr>
+              </table>
+              <p class="text-muted font-sm" style="margin-top:12px;">
+                Additional excesses may apply for young or inexperienced drivers.
+                <a href="#" style="color:var(--navy); font-weight:bold;">Click here</a> for details.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /RIGHT COLUMN -->
+      </div><!-- /.two-col--60-40 -->
+
+      <!-- Continue button -->
+      <div class="btn-container--right" style="margin-top: 32px;">
+        <a href="vehicle-lookup.html" class="btn-back">← Back</a>
+        <a href="extras.html" class="btn btn-primary">Continue</a>
+      </div>
+
+    </div><!-- /.page-content--wide -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

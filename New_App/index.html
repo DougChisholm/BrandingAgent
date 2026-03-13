@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Get a Quote</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step active" id="step-details">
+          <div class="dot"></div>
+          Your details
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-car">
+          <div class="dot"></div>
+          Your car
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-cover">
+          <div class="dot"></div>
+          Your cover
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ======================================================
+       MAIN CONTENT
+       ====================================================== -->
+  <main>
+    <div class="page-content">
+
+      <!-- Page heading -->
+      <h1>Welcome to Swinton Go!</h1>
+      <p class="page-subtitle">We'll search our panel of car insurers to find a great policy for you</p>
+
+      <div class="two-col" style="margin-top: 24px;">
+
+        <!-- ---- LEFT COLUMN ---- -->
+        <div>
+          <!-- Before you begin -->
+          <h2 class="section-heading" style="margin-top:0;">Before you begin</h2>
+          <p style="font-size:14px; line-height:1.7; color:#333; margin-bottom:12px;">
+            Swinton Go! Insurance is arranged and administered by BiSL Limited, an insurance intermediary.
+            References to 'We', 'Us' and 'Our' mean BiSL Limited. Any information you give to us will only
+            be used to provide you with a Swinton Go! Insurance quote and/or policy.
+          </p>
+          <p style="font-size:14px; line-height:1.7; color:#333; margin-bottom:12px;">
+            It is important that the information you provide throughout the quote and duration of the policy is accurate.
+          </p>
+          <div class="warn-box">
+            <span class="warn-icon">ⓘ</span>
+            <span>
+              Failure to disclose correct and complete information to the best of your knowledge may result in
+              increased premiums, refusal of a claim or not being fully paid, your policy being cancelled or
+              being made null &amp; void and treated as if it never existed.
+            </span>
+          </div>
+
+          <!-- Tell us about yourself -->
+          <h2 class="section-heading">Tell us about yourself</h2>
+
+          <form data-next="your-details.html">
+
+            <!-- Title selector -->
+            <div class="form-group">
+              <label class="form-label">Title</label>
+              <div class="title-btn-group">
+                <button type="button" class="title-btn" data-value="Mr">Mr</button>
+                <button type="button" class="title-btn" data-value="Mrs">Mrs</button>
+                <button type="button" class="title-btn" data-value="Ms">Ms</button>
+                <button type="button" class="title-btn" data-value="Miss">Miss</button>
+                <button type="button" class="title-btn" data-value="Mx">Mx</button>
+                <button type="button" class="title-btn" data-value="Dr">Dr</button>
+              </div>
+            </div>
+
+            <!-- First name -->
+            <div class="form-group">
+              <label class="form-label" for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" class="form-input"
+                     placeholder="e.g. Sam" autocomplete="given-name" required>
+            </div>
+
+            <!-- Surname -->
+            <div class="form-group">
+              <label class="form-label" for="surname">Surname</label>
+              <input type="text" id="surname" name="surname" class="form-input"
+                     placeholder="e.g. Smith" autocomplete="family-name" required>
+            </div>
+
+            <!-- Date of birth -->
+            <div class="form-group">
+              <label class="form-label" for="dob">Date of birth</label>
+              <input type="text" id="dob" name="dob" class="form-input"
+                     placeholder="dd/mm/yyyy" maxlength="10" required>
+            </div>
+
+            <!-- CTA -->
+            <div class="btn-container">
+              <button type="submit" class="btn btn-primary">Start my quote</button>
+              <p class="text-muted text-center" style="font-size:13px; max-width: 380px;">
+                Choosing to continue by selecting 'Start my quote', you are confirming that you have read and agreed to our:
+              </p>
+              <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+                <a href="#" class="btn-link">Terms and conditions</a>
+                <a href="#" class="btn-link">Quote acceptance information</a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- ---- RIGHT COLUMN ---- -->
+        <div>
+          <div class="panel">
+            <h2 style="font-size:18px; margin-bottom:10px;">How we use your data</h2>
+            <p style="font-size:14px; line-height:1.7; margin-bottom:12px;">
+              We will use your data for the purposes of providing your quote which may include:
+            </p>
+            <ul style="padding-left:8px; margin-bottom:14px;">
+              <li style="font-size:14px; line-height:1.8; list-style:disc; margin-left:16px;">Sharing your data with our insurers.</li>
+              <li style="font-size:14px; line-height:1.8; list-style:disc; margin-left:16px;">Using your data for fraud prevention and to verify the information you provide to us.</li>
+              <li style="font-size:14px; line-height:1.8; list-style:disc; margin-left:16px;">Checks with external databases such as credit reference agencies and publicly available sources of information as part of this process. Any credit searches will appear on your credit report but will not be visible to other lenders, unless you take out a policy and choose to pay by monthly instalments.</li>
+            </ul>
+            <p style="font-size:14px; line-height:1.7; margin-bottom:12px;">
+              If you have previously held a product with BiSL Limited or obtained a quote in the past, we may carry out checks against the data we already hold on you.
+            </p>
+            <p style="font-size:14px; line-height:1.7;">
+              Our <a href="#" style="font-weight:bold; color:var(--navy);">Privacy Policy</a> provides more details of how your data is used, the legal basis that we rely on to process it and gives you information on the rights you have over your data, and how to exercise them.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.two-col -->
+    </div><!-- /.page-content -->
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

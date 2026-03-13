@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Additional Cover Options</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step done" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step active" id="step-extras">
+          <div class="dot"></div>
+          Extras
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-review">
+          <div class="dot"></div>
+          Review
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-pay">
+          <div class="dot"></div>
+          Pay
+        </div>
+      </div>
+    </nav>
+    <div class="header-right">
+      <div>
+        <div class="header-quote-num">Quote number</div>
+        <div style="font-size:13px; font-weight:bold; color:var(--navy);" id="header-quote-num">P9Q461694</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <span style="font-size:18px;">🛒</span>
+        <span class="header-price"><span id="header-price-monthly">£23.24</span> / monthly</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="page-content">
+      <h1>Additional cover options</h1>
+      <p class="page-subtitle">Enhance your policy with these optional extras</p>
+
+      <!-- NCD Protection -->
+      <div class="addon-card" id="card-ncd">
+        <div class="addon-card-info">
+          <div class="addon-card-title">No Claims Discount Protection</div>
+          <div class="addon-card-desc">
+            Protect your no claims discount so that if you need to make a claim, your discount won't be reduced.
+            Available if you have 2 or more years' NCD.
+          </div>
+          <div class="addon-card-price">£3.50 / month</div>
+        </div>
+        <div class="addon-card-action">
+          <button class="toggle-btn" data-addon="ncd">Add</button>
+        </div>
+      </div>
+
+      <!-- Motor Legal Protection -->
+      <div class="addon-card selected" id="card-legal">
+        <div class="addon-card-info">
+          <div class="addon-card-title">Motor Legal Protection</div>
+          <div class="addon-card-desc">
+            Covers legal costs up to £100,000 if you're involved in an accident that wasn't your fault.
+            Helps you claim back uninsured losses such as excess and personal injury.
+          </div>
+          <div class="addon-card-included">✓ Included as standard</div>
+        </div>
+        <div class="addon-card-action">
+          <span style="font-size:13px; color:#1b7a3e; font-weight:bold;">Included</span>
+        </div>
+      </div>
+
+      <!-- Guaranteed Replacement Car -->
+      <div class="addon-card" id="card-grc">
+        <div class="addon-card-info">
+          <div class="addon-card-title">Guaranteed Replacement Car</div>
+          <div class="addon-card-desc">
+            If your car is stolen or written off, we'll provide you with a replacement car for up to 21 days
+            while your claim is settled. Upgrades your standard courtesy car cover.
+          </div>
+          <div class="addon-card-price">£5.20 / month</div>
+        </div>
+        <div class="addon-card-action">
+          <button class="toggle-btn" data-addon="grc">Add</button>
+        </div>
+      </div>
+
+      <!-- Keycare -->
+      <div class="addon-card" id="card-keycare">
+        <div class="addon-card-info">
+          <div class="addon-card-title">Keycare</div>
+          <div class="addon-card-desc">
+            Covers the cost of replacing or repairing lost, stolen or damaged keys, locks and remote
+            handsets for your vehicle, home and office.
+          </div>
+          <div class="addon-card-price">£2.00 / month</div>
+        </div>
+        <div class="addon-card-action">
+          <button class="toggle-btn" data-addon="keycare">Add</button>
+        </div>
+      </div>
+
+      <!-- RAC Breakdown -->
+      <div class="addon-card" id="card-rac">
+        <div class="addon-card-info">
+          <div class="addon-card-title">RAC Breakdown Assistance</div>
+          <div class="addon-card-desc">
+            Roadside assistance, recovery and onward travel for you and your vehicle.
+            Choose from Roadside, Roadside &amp; Recovery, or Comprehensive cover.
+          </div>
+          <div class="addon-card-price">From £4.80 / month</div>
+        </div>
+        <div class="addon-card-action">
+          <select class="form-select" style="width:auto; font-size:13px; margin-bottom:8px;">
+            <option value="">Select level...</option>
+            <option value="roadside">Roadside – £4.80/mo</option>
+            <option value="recovery">Roadside + Recovery – £6.50/mo</option>
+            <option value="comprehensive">Comprehensive – £9.20/mo</option>
+          </select>
+          <button class="toggle-btn" data-addon="rac">Add</button>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-container--right" style="margin-top:36px;">
+        <a href="your-cover.html" class="btn-back">← Back</a>
+        <a href="review.html" class="btn btn-primary">Continue</a>
+      </div>
+
+    </div><!-- /.page-content -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

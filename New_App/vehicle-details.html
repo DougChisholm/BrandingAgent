@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swinton Go! Insurance – Vehicle Details</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Swinton Go! Insurance" class="logo">
+    </a>
+    <nav class="progress-nav" aria-label="Quote progress">
+      <div class="step-wrap">
+        <div class="step done" id="step-details">
+          <div class="dot"></div>
+          Your details
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step active" id="step-car">
+          <div class="dot"></div>
+          Your car
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-cover">
+          <div class="dot"></div>
+          Your cover
+        </div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-wrap">
+        <div class="step" id="step-quote">
+          <div class="dot"></div>
+          Quote
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="page-content">
+      <h1>Is this your car?</h1>
+      <p class="page-subtitle">We found the following vehicle registered to that number plate</p>
+
+      <!-- Vehicle Card -->
+      <div id="vehicleDetailsContent" style="max-width: 640px; margin-top: 28px;">
+        <div class="panel panel--navy-border" style="display:flex; gap:28px; align-items:flex-start;">
+
+          <!-- Car icon -->
+          <div style="font-size:72px; line-height:1; flex-shrink:0; margin-top:4px;">🚗</div>
+
+          <div style="flex:1;">
+            <h2 style="font-size:22px; margin-bottom:4px; color:var(--navy);">
+              <span id="vd-year">2019</span>
+              <span id="vd-make">Ford</span>
+              <span id="vd-model">Focus</span>
+            </h2>
+            <p style="font-size:14px; color:var(--text-muted); margin-bottom:16px;" id="vd-variant">
+              1.0T EcoBoost 125ps Titanium
+            </p>
+
+            <!-- Reg plate badge -->
+            <div style="margin-bottom:16px;">
+              <span style="display:inline-block; background:#FABB00; border:2px solid #333; border-radius:4px; padding:4px 12px; font-size:18px; font-weight:bold; letter-spacing:3px;" id="vd-reg">
+                SG19 SWT
+              </span>
+            </div>
+
+            <table style="width:100%; border-collapse:collapse;">
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px; width:50%;">Make</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-make-td">Ford</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px;">Model</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-model-td">Focus</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px;">Year</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-year-td">2019</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px;">Fuel type</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-fuel">Petrol</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px;">Engine size</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-engine">999cc</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px;">Colour</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-colour">Silver</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 0; font-weight:bold; color:var(--text-muted); font-size:14px;">Transmission</td>
+                <td style="padding:6px 0; font-size:14px;" id="vd-transmission">Manual</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div style="margin-top: 28px; display:flex; flex-direction:column; gap:14px; max-width:320px;">
+        <a href="your-cover.html" class="btn btn-primary" style="text-align:center;">
+          Yes, that's my car
+        </a>
+        <a href="vehicle-lookup.html" class="btn-back" style="text-align:center;">
+          No, search again
+        </a>
+      </div>
+
+    </div><!-- /.page-content -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2026 <strong>Swinton Go!</strong> All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Important info</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Privacy policy</a>
+        <span class="sep"> / </span>
+        <a href="#" class="footer-ext">Cookie policy</a>
+        <span class="sep"> / </span>
+        <a href="#">Contact us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

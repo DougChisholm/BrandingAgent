@@ -1,0 +1,103 @@
+# Swinton Go! Insurance – New App Limitations
+
+## Overview
+This document describes limitations encountered while building the rebranded
+Swinton Go! Insurance motor quote application.
+
+---
+
+## 1. Design Screenshot Coverage
+- The New_Design folder contains 90+ screenshot images of the legacy Bank of Scotland
+  journey. Only 5 images could be viewed per session due to tool constraints.
+- Key reference images used:
+    - "Page 1 - Desktop Pre Quote 2026-03-09 172525.png" (landing / your-details page)
+    - "your-cover.png" (quote details / price presentation page)
+  All other pages were built from the legacy Razor (.cshtml) view code and inferred
+  from the screenshot filenames rather than direct visual inspection.
+
+## 2. Static HTML — No Server-Side Rendering
+- The legacy app is a C# ASP.NET Core MVC application (Razor views) using BGL
+  component libraries (BGLi.Components.*) that render server-side HTML.
+- These components (navigation, basket, driver details, vehicle lookup, price widgets)
+  cannot be replicated without the BGL SDK. All UI has been hand-coded in plain
+  HTML/CSS/JS as faithful equivalents.
+
+## 3. Stubbed API Calls
+- All backend API calls are stubbed with JavaScript setTimeout() returning fixed
+  dummy data:
+    - Vehicle lookup → always returns 2019 Ford Focus 1.0T EcoBoost
+    - Quote API → always returns £294.87 annual / £23.24 × 11 monthly
+    - Address lookup → returns 4 sample Manchester addresses
+- No real insurer panel search, no real pricing engine, no real vehicle DVLA lookup.
+
+## 4. No Authentication / Session Management
+- The legacy app uses ASP.NET Core session and claims-based identity (User.QuoteId()).
+- The new app uses browser sessionStorage as a simple substitute. Data is lost
+  if the browser tab is closed. No server-side session persistence.
+
+## 5. No Payment Processing
+- The payment page collects card details in a form but submits nothing.
+  The "Pay now" button navigates directly to confirmation.html.
+- No PCI-DSS compliant card tokenisation, no Stripe/Braintree integration.
+
+## 6. No Direct Debit Integration
+- The direct debit mandate text is displayed but no actual GoCardless / BACS
+  direct debit setup is performed.
+
+## 7. Google Tag Manager / Analytics
+- The legacy app integrates Google Tag Manager, Adobe Analytics, and TrustPilot
+  widgets. These are omitted from the new app as they require tenant-specific
+  configuration keys not available in this environment.
+
+## 8. OneTrust / Cookie Consent
+- OneTrust cookie consent banner is not included (requires a valid OneTrust domain
+  key and CDN script access).
+
+## 9. Hero / Scenic Images
+- The legacy app references server-hosted images (country-road.png, umbrella.png,
+  money-pot-with-plant.png). These assets are not available in the New_Design folder.
+- CSS gradient + emoji placeholders are used in their place on the your-cover.html page.
+
+## 10. Virtual Assistant (UJET)
+- The legacy app embeds a UJET virtual assistant chat widget. This is omitted as
+  it requires a UJET account and configuration key.
+
+## 11. Validation
+- Form validation is basic (HTML5 required attributes). The legacy app uses
+  server-side validation with detailed error messaging per BGL component standards.
+  Complex business rules (e.g. date of birth age limits, licence date logic,
+  claims history cross-validation) are not enforced.
+
+## 12. Multi-driver Journey
+- The legacy app supports adding additional drivers with their own full details
+  journey. The new app shows an "Add another driver" button that does not navigate
+  to a driver details sub-journey.
+
+## 13. Accessibility
+- Skip-to-main-content link is not included. Full ARIA labelling and keyboard
+  navigation testing has not been performed. The legacy app uses BGL's UIL design
+  system which has been accessibility-tested; the new bespoke CSS has not.
+
+## 14. Responsive / Mobile
+- Basic responsive CSS media queries are included. Full mobile device testing
+  has not been performed beyond a 768px breakpoint.
+
+---
+
+## Files Created
+- New_App/index.html              (Page 1 – Your Details / Landing)
+- New_App/your-details.html       (Page 4 – More Personal Details)
+- New_App/vehicle-lookup.html     (Page 2 – Vehicle Registration Lookup)
+- New_App/vehicle-details.html    (Page 3 – Vehicle Confirmation)
+- New_App/your-cover.html         (Page 5 – Quote Details, matches your-cover.png design)
+- New_App/price-presentation.html (Page 6 – Monthly vs Annual Price Choice)
+- New_App/extras.html             (Page 7 – Optional Add-ons)
+- New_App/review.html             (Page 8 – Policy Review)
+- New_App/payment.html            (Page 9 – Payment)
+- New_App/confirmation.html       (Page 10 – All Done)
+- New_App/assets/styles.css       (Complete Swinton Go! brand stylesheet)
+- New_App/assets/app.js           (JavaScript: navigation, stubs, storage, UI)
+- New_App/assets/logo.png         (Swinton Go! logo, copied from New_Design/)
+
+---
+Generated: 2026 | Swinton Go! Insurance rebranding project
