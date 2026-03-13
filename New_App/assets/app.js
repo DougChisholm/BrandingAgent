@@ -371,13 +371,17 @@
         const method = btn.dataset.method;
         const monthlySection = document.getElementById('monthlyDetails');
         const annualSection = document.getElementById('annualDetails');
+        // Show/hide direct debit mandate box (payment.html)
+        const mandateBox = document.getElementById('mandateBox');
 
         if (method === 'monthly') {
           if (monthlySection) monthlySection.style.display = 'block';
           if (annualSection) annualSection.style.display = 'none';
+          if (mandateBox) mandateBox.style.display = 'block';
         } else {
           if (monthlySection) monthlySection.style.display = 'none';
           if (annualSection) annualSection.style.display = 'block';
+          if (mandateBox) mandateBox.style.display = 'none';
         }
         store.set('paymentMethod', method);
       });

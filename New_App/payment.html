@@ -174,16 +174,5 @@
   </footer>
 
   <script src="assets/app.js"></script>
-  <script>
-    // Show/hide mandate box based on payment method
-    document.querySelectorAll('.payment-toggle-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var mandateBox = document.getElementById('mandateBox');
-        if (mandateBox) {
-          mandateBox.style.display = btn.dataset.method === 'monthly' ? 'block' : 'none';
-        }
-      });
-    });
-  </script>
 </body>
 </html>
